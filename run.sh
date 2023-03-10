@@ -7,6 +7,7 @@ python -m torch.distributed.launch \
 	--eval_split_name="test" \
 	--model_index_name="Whisper Large v2 Korean" \
 	--max_steps="5000" \
+	--n_gpu="6" \
 	--output_dir="./whisper-large-v2-Ko" \
 	--per_device_train_batch_size="32" \
 	--per_device_eval_batch_size="16" \
