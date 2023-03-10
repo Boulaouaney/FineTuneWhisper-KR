@@ -18,13 +18,14 @@ python3 -m torch.distributed.launch \
 	--save_strategy="steps" \
 	--save_steps="1000" \
 	--generation_max_length="225" \
-	--freeze_feature_encoder="False" \
+	--preprocessing_num_workers="32" \
+	--freeze_feature_encoder="True" \
 	--report_to="tensorboard" \
 	--metric_for_best_model="wer" \
 	--greater_is_better="False" \
 	--load_best_model_at_end \
 	--gradient_checkpointing \
-	--fp16 \
+	--fp16="True" \
 	--overwrite_output_dir \
 	--do_train \
 	--do_eval \
