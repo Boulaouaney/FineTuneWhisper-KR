@@ -181,7 +181,7 @@ class DataTrainingArguments:
         },
     )
     do_lower_case: bool = field(
-        default=True,
+        default=False,
         metadata={"help": "Whether the target text should be lower cased."},
     )
     language: str = field(
