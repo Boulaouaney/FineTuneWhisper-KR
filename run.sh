@@ -1,4 +1,4 @@
-python -m torch.distributed.launch \
+python3 -m torch.distributed.launch \
 	--nproc_per_node 6 FineTuningScript.py \
 	--model_name_or_path="openai/whisper-large-v2" \
 	--dataset_name="Bingsu/zeroth-korean" \
