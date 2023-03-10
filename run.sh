@@ -3,7 +3,7 @@ python3 -m torch.distributed.launch \
 	--model_name_or_path="openai/whisper-large-v2" \
 	--dataset_name="Bingsu/zeroth-korean" \
 	--language="korean" \
-	--preprocessing_only = "True" \
+	--preprocessing_only="True" \
 	--train_split_name="train" \
 	--eval_split_name="test" \
 	--model_index_name="Whisper Large v2 Korean" \
