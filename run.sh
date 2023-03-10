@@ -19,7 +19,6 @@ python3 -m torch.distributed.launch \
 	--save_steps="1000" \
 	--generation_max_length="225" \
 	--preprocessing_num_workers="32" \
-	--freeze_feature_encoder="True" \
 	--report_to="tensorboard" \
 	--metric_for_best_model="wer" \
 	--greater_is_better="False" \
