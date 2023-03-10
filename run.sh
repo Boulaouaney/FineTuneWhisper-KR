@@ -6,7 +6,6 @@ python3 -m torch.distributed.launch \
 	--preprocessing_only="True" \
 	--train_split_name="train" \
 	--eval_split_name="test" \
-	--model_index_name="Whisper Large v2 Korean" \
 	--max_steps="5000" \
 	--output_dir="./whisper-large-v2-Ko" \
 	--per_device_train_batch_size="32" \
@@ -31,7 +30,5 @@ python3 -m torch.distributed.launch \
 	--do_train \
 	--do_eval \
 	--predict_with_generate="True" \
-	--do_normalize_eval \
-	--streaming="False" \
 	--use_auth_token="True" \
 	--push_to_hub="True"
