@@ -11,7 +11,7 @@ def transcribe(audio):
 def main():
     iface = gr.Interface(
         fn=transcribe,
-        inputs=[gr.Audio(source="microphone", type="filepath"),
+        inputs=[gr.Audio(source="microphone", type="filepath", streaming=True),
         "state"
         ],
         outputs=[
