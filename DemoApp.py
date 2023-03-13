@@ -7,11 +7,13 @@ def transcribe(audio):
     text = pipe(audio)["text"]
     state += text + " "
     return state, state
+    
 def main():
     iface = gr.Interface(
         fn=transcribe,
-        inputs=[gr.Audio(source="microphone", type="filepath", streaming=True),
-        "state"],
+        inputs=[gr.Audio(source="microphone", type="filepath"),
+        "state"
+        ],
         outputs=[
             "textbox",
             "state"
