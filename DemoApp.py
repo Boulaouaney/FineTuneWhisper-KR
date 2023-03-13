@@ -3,7 +3,7 @@ import gradio as gr
 
 pipe = pipeline(model="byoussef/whisper-large-v2-Ko")
 
-def transcribe(audio):
+def transcribe(audio, state=""):
     text = pipe(audio)["text"]
     state += text + " "
     return state, state
