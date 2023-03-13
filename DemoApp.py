@@ -16,7 +16,7 @@ def main():
             "textbox",
             "state"
         ],
-        live=True
+        live=True,
         title="Whisper Large-v2 Korean",
         description="Realtime demo for Korean speech recognition using a fine-tuned Whisper large-v2 model.",
     )
