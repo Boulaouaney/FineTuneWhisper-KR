@@ -1,7 +1,7 @@
 from transformers import pipeline
 import gradio as gr
 
-pipe = pipeline(model="byoussef/whisper-large-v2-Ko")
+pipe = pipeline(model="byoussef/whisper-large-v2-Ko", device=1)
 
 def transcribe(audio, state=""):
     text = pipe(audio)["text"]
