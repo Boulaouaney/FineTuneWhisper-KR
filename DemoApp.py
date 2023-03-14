@@ -23,7 +23,7 @@ def main():
         title="Whisper Large-v2 Korean",
         description="Realtime demo for Korean speech recognition using a fine-tuned Whisper large-v2 model."
     )
-
+    iface.queue(concurrency_count=9)
     iface.launch(share=True)
 
 if __name__ == "__main__":
