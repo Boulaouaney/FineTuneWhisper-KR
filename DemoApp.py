@@ -11,8 +11,9 @@ def transcribe(audio, state=""):
 def main():
     iface = gr.Interface(
         fn=transcribe,
-        inputs=[gr.Audio(source="microphone", type="filepath", streaming=True),
-        "state"
+        inputs=[
+            gr.Audio(source="microphone", type="filepath", streaming=True),
+            "state"
         ],
         outputs=[
             "textbox",
@@ -20,7 +21,7 @@ def main():
         ],
         live=True,
         title="Whisper Large-v2 Korean",
-        description="Realtime demo for Korean speech recognition using a fine-tuned Whisper large-v2 model.",
+        description="Realtime demo for Korean speech recognition using a fine-tuned Whisper large-v2 model."
     )
 
     iface.launch(share=True)
